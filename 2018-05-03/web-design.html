@@ -1,11 +1,265 @@
 <html>
 
-<head>
-    <style>
-       
-    </style>
-</head>
-
+        <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+                <style>
+                    * {
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                    }
+                    body {
+                        font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+                        background-color: #fff;
+                    }
+                    header>span {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 2.25;
+                    }
+                    header>h1 {
+                        margin-top: 11px;
+                        font-size: 34px;
+                        font-weight: bold;
+                        line-height: 1.32;
+                    }
+                    header>table {
+                        width: 100%;
+                    }
+                    header,
+                    article>header {
+                        max-width: calc(270/320*100%);
+                        margin: 0 auto
+                    }
+                    article {
+                        color: #2d2d2d;
+                    }
+                    article>header>span {
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 2.25;
+                    }
+                    article>p,
+                    article>h2,
+                    article>blockquote,
+                    article>ul,
+                    article figcaption,
+                    article>div,
+                    article>header {
+                        max-width: calc(270/320*100%);
+                        margin: 0 auto;
+                    }
+                    article>p,
+                    article>blockquote {
+                        font-size: 18px;
+                        line-height: 2.0;
+                        letter-spacing: 0.9px;
+                        margin-top: 40px;
+                    }
+                    article>blockquote {
+                        padding-left: 21px;
+                        color: #6d6d6d;
+                        border-left: 1px solid #6d6d6d;
+                    }
+                    article figcaption {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        letter-spacing: 0.8px;
+                        color: #6d6d6d;
+                        margin-top: 15px;
+                    }
+                    article>h2 {
+                        font-size: 22px;
+                        font-weight: bold;
+                        letter-spacing: 1.1px;
+                        line-height: 1.64;
+                        margin-top: 40px;
+                    }
+                    @media screen and (min-width:1024px) {
+                        header {
+                            width: 900px;
+                        }
+                        article,
+                        article>header {
+                            max-width: 900px;
+                            margin: 0 auto;
+                        }
+                    }
+                    @media screen and (min-width:768px) and (max-width:1023px) {
+                        header {
+                            width: 678px
+                        }
+                        article,
+                        article>header {
+                            max-width: 678px;
+                            margin: 0 auto;
+                        }
+                    }
+                    .authors {
+                        margin-right: 30px;
+                        font-size: 15px;
+                        line-height: 2.25;
+                    }
+                    a {
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        border-bottom: 1px solid #c71b0a;
+                    }
+                    article>figure {
+                        margin: 0;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 1023px) {
+                        article>figure {
+                            width: 678px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    @media screen and (min-width: 1024px) {
+                        article>figure {
+                            width: 900px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        .float-right {
+                            float: right;
+                            width: 360px;
+                            margin-top: 40px;
+                            margin-left: 40px;
+                            margin-bottom: 50px;
+                        }
+                    }
+                    body {
+                        font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+                        background-color: #F1F1F1;
+                    }
+                    article>ul {
+                        list-style-type: none;
+                        padding-left: 0;
+                        width: 100%;
+                    }
+                    footer {
+                        background-color: #bfbfbf;
+                    }
+                    footer>table {
+                        border-spacing: 45px;
+                        width: 100%;
+                    }
+                    .header {
+                        margin-top: 17px;
+                        margin-bottom: 17px;
+                    }
+                    .logo {
+                        width: 100px;
+                        height: 25px;
+                        background-color: #e1e1e1
+                    }
+                    .menu {
+                        width: 22px;
+                        height: 22px;
+                        background-color: #e1e1e1;
+                    }
+                    .introduction {
+                        font-size: 22px;
+                        line-height: 1.82;
+                        letter-spacing: 1.6px;
+                        text-align: justify;
+                        margin-top: 30px;
+                    }
+                    .related-text {
+                        font-size: 16px;
+                        line-height: 2.25;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                    .related-items {
+                        margin-bottom: 60px;
+                    }
+                    .related-item {
+                        background-color: #e1e1e1;
+                        margin-top: 20px;
+                        padding: 20px;
+                        cursor: pointer;
+                    }
+                    .related-item>img {
+                        width: 20%;
+                        vertical-align: middle;
+                    }
+                    .related-item>div {
+                        display: inline-block;
+                        width: 70%;
+                        padding-left: 20px;
+                        vertical-align: middle;
+                        line-height: 1.5;
+                    }
+                    footer {
+                        background-color: #bfbfbf;
+                        min-height: 300px;
+                    }
+                    footer>table {
+                        border-spacing: 45px;
+                        width: 100%;
+                    }
+                    .footer-circle {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background-color: #777;
+                        margin: 0 auto;
+                    }
+                    .footer-text {
+                        margin-top: 15px;
+                        font-size: 18px;
+                        text-align: center;
+                        color: #777;
+                    }
+                    .flex-footer {
+                        display: flex;
+                        justify-content: space-around;
+                        max-width: 529px;
+                        margin: 0 auto;
+                        padding-top: 65px;
+                        flex-wrap: wrap
+                    }
+                    .flex-footer>div {
+                        min-width: 114px;
+                        margin-bottom: 48px
+                    }
+                    @media screen and (max-width:768px) {
+                        .flex-footer {
+                            width: 228px;
+                        }
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 1023px) {
+                        article>p,
+                        article>h2,
+                        article>blockquote,
+                        article>ul,
+                        article figcaption,
+                        article>div,
+                        article>header,
+                        article>ul {
+                            width: 550px;
+                        }
+                    }
+                    @media screen and (min-width: 1024px) {
+                        article>p,
+                        article>h2,
+                        article>blockquote,
+                        article>ul,
+                        article figcaption,
+                        article>div,
+                        article>header {
+                            max-width: 756px;
+                        }
+                        article>ul {
+                            width: 700px;
+                        }
+                    }
+                </style>
+            
+            </head>
 
 
 
@@ -15,12 +269,31 @@
         <img src="DSC_4406.jpg" style="display:block; margin:auto;width: 800px"></img>
     </figure>
 
+    <header class="header">
+            <table style="width:100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="logo"></div>
+                        </td>
+                        <td style="width:22px">
+                            <div class="menu"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+        <article>
+            <header>
+                
+                <h1 style="margin-top: 30px">後同婚時代 15年性平運動何去何從</h1>
+            </header>
+
     <div style="display:block; margin:auto;width: 800px">
         <a>點閱率</a>
             <a href="http://www.cutercounter.com/traditional-chinese/" target="_blank"><img src="http://www.cutercounter.com/hit.php?id=13248&nd=6&style=34" border="0" alt="計數器"></a>
-    <h1>後同婚時代 15年性平運動何去何從ooo</h1>
-    <p>測試
-        </p>
+    
+    
 
         <figure>
                 <img src="DSC_4294.jpg" style="display:block; margin:auto;width: 800px"></img>
