@@ -1,0 +1,585 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #fff;
+        }
+
+        header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        header>h1 {
+            margin-top: 11px;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.32;
+        }
+
+        header>table {
+            width: 100%;
+        }
+
+        header,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto
+        }
+
+        article {
+            color: #2d2d2d;
+        }
+
+        article>header>span {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 2.25;
+        }
+
+        article>p,
+        article>h2,
+        article>blockquote,
+        article>ul,
+        article figcaption,
+        article>div,
+        article>header {
+            max-width: calc(270/320*100%);
+            margin: 0 auto;
+        }
+
+        article>p,
+        article>blockquote {
+            font-size: 18px;
+            line-height: 2.0;
+            letter-spacing: 0.9px;
+            margin-top: 40px;
+        }
+
+        article>blockquote {
+            padding-left: 21px;
+            color: #6d6d6d;
+            border-left: 1px solid #6d6d6d;
+        }
+
+        article figcaption {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.8px;
+            color: #6d6d6d;
+            margin-top: 15px;
+        }
+
+        article>h2 {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1.1px;
+            line-height: 1.64;
+            margin-top: 40px;
+        }
+
+        @media screen and (min-width:1024px) {
+            header {
+                width: 900px;
+            }
+            article,
+            article>header {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:1023px) {
+            header {
+                width: 678px
+            }
+            article,
+            article>header {
+                max-width: 678px;
+                margin: 0 auto;
+            }
+        }
+
+        .authors {
+            margin-right: 30px;
+            font-size: 15px;
+            line-height: 2.25;
+        }
+
+        a {
+            color: #2d2d2d;
+            text-decoration: none;
+            border-bottom: 1px solid #c71b0a;
+        }
+
+        article>figure {
+            margin: 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>figure {
+                width: 678px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>figure {
+                width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .float-right {
+                float: right;
+                width: 360px;
+                margin-top: 40px;
+                margin-left: 40px;
+                margin-bottom: 50px;
+            }
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "Noto Sans TC", "PingFang TC", "Apple LiGothic Medium", Roboto, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+            background-color: #F1F1F1;
+        }
+
+        article>ul {
+            list-style-type: none;
+            padding-left: 0;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .header {
+            margin-top: 17px;
+            margin-bottom: 17px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 25px;
+            background-color: #e1e1e1
+        }
+
+        .menu {
+            width: 22px;
+            height: 22px;
+            background-color: #e1e1e1;
+        }
+
+        .introduction {
+            font-size: 22px;
+            line-height: 1.82;
+            letter-spacing: 1.6px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+
+        .related-text {
+            font-size: 16px;
+            line-height: 2.25;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .related-items {
+            margin-bottom: 60px;
+        }
+
+        .related-item {
+            background-color: #e1e1e1;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .related-item>img {
+            width: 20%;
+            vertical-align: middle;
+        }
+
+        .related-item>div {
+            display: inline-block;
+            width: 70%;
+            padding-left: 20px;
+            vertical-align: middle;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #bfbfbf;
+            min-height: 300px;
+        }
+
+        footer>table {
+            border-spacing: 45px;
+            width: 100%;
+        }
+
+        .footer-circle {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #777;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 18px;
+            text-align: center;
+            color: #777;
+        }
+
+        .flex-footer {
+            display: flex;
+            justify-content: space-around;
+            max-width: 529px;
+            margin: 0 auto;
+            padding-top: 65px;
+            flex-wrap: wrap
+        }
+
+        .flex-footer>div {
+            min-width: 114px;
+            margin-bottom: 48px
+        }
+
+
+        .cover-foto img {
+            width: 300px;
+            height: 300px;
+            background: #f80;
+            border-radius: 50%;
+            object-fit: cover;
+
+        }
+
+
+
+
+        @media screen and (max-width:768px) {
+            .flex-footer {
+                width: 228px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1023px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header,
+            article>ul {
+                width: 550px;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            article>p,
+            article>h2,
+            article>blockquote,
+            article>ul,
+            article figcaption,
+            article>div,
+            article>header {
+                max-width: 756px;
+            }
+            article>ul {
+                width: 700px;
+            }
+        }
+    </style>
+
+</head>
+<!--
+ .related-item>div:first-child {
+            display: table-cell;
+            width: 80px;
+            height: 80px;
+            background-color: papayawhip;
+        }
+        .related-item>div:last-child {
+            display: table-cell;
+            padding-left: 20px;
+            vertical-align: middle;
+        }
+-->
+
+<body style="font-family: Microsoft JhengHei, " Noto Sans TC ", "PingFang TC ", "Apple LiGothic Medium ", Roboto, "Lucida
+    Grande ", "Lucida Sans Unicode ", sans-serif;
+background-color: #fff">
+
+
+    <header class="header">
+        <table style="width:100%">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="logo"></div>
+                    </td>
+                    <td style="width:22px">
+                        <div class="menu"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <article>
+
+        <figure style="margin-top: 30px; width: 100%; height: 400px; position: none; overflow: hidden; ">
+            <img style="margin-top: -120px" src="DSC_4406.jpg" alt="leading image of this article" width="100%" />
+        </figure>
+
+        <header>
+            <!-- 頭標
+                <span>人權</span>
+            -->
+            <h1 style="margin-top: 30px">白育綸觀點》後同婚時代 15年性平運動何去何從</h1>
+        </header>
+
+
+        <div style="margin-bottom:15px">
+            <span class="authors">評論人／
+                <b>
+                    <a href="https://medium.com/@paiyulun"
+                        target="_blank">白育綸</a>
+                </b>
+            </span>
+
+            <span class="authors">
+                <b>攝影／
+                    <a href="https://www.facebook.com/profile.php?id=100001820021329"
+                        target="_blank">黃堃睿</a>
+                </b>
+            </span>
+
+        </div>
+
+
+        <p class="introduction">第15屆台灣同志遊行，昨（28）日下午在總統府前集結，群眾從景福門一路延伸到台大醫院，距離出發還有兩小時，捷運出口已經開始流量管制，在凱道的例行活動之中，也只有同志遊行有這種規模。對許多關心性別議題的人來說，10月的最後一個週六已經是行事曆上習慣空下來的日子，無論是異性戀的「直同志」或是最早遊行訴求想要讓市民看到的同志族群，以及後來逐漸被大家認識的多元性別和性向者，這場訴求「抗議」活動，但也是一個同志社群相聚、認識新朋友的日子，將近兩百個報名團體之中，遇到認識的人或者網路上曾相談的對象，他們發出一聲：「噢，你也在這裡」！
+        </p>
+        <p class="introduction">即使在15年後的今天，同志族群被社會接受的程度空前之高，資訊亦日漸普及，透過指認和學習的性別主流化歷程，對於不能獲的充分或正確資訊的多元性別者來說，走上街頭的遊行，仍然是一種認識自我的方式。即便是一個沒有參加遊行的高中生，在公車上望向街頭，看到了像自己的他人，雖然自己仍然住在「櫃子」裡，看到同類後覺得自己其實並「不奇怪」，而見容於社會，這是主辦單位賦予這個十萬人上街頭活動，始終不變目的。
+        </p>
+        <h2 class="title">遊行是不是一場萬人園遊會</h2>
+        <p>
+            遊行的規模越來越大是不爭的事實，精心打扮、身材較勁在同志族群當中一年度的「現身」成為不或缺的環節，許多人不知道的是，從第2屆開始，每屆主辦單位總會煞費苦心制定當年主題，在進一步了解今年的題目之前，或許要先問，為什麼要這麼做？爭取權益不是一件簡單明瞭的事情嗎？即便是同志族群，也有許多人沈浸在嘉年華會的歡樂氣氛中，覺得同運不過是一場爭艷的散步或快樂的園遊會，甚至質疑，用主題聯結了比起「同志」這個標籤，承受更多污名的族群像是用藥者、愛滋病、殘障人士、性少數，是不是在已經很辛苦的同志處境裡，雪上加霜，或是邀請其他看似不相關的工運、婦女團體上台發言，去年有爭議熱潮上的空服員職業工會、消防工會，今年也有愛滋患者上台短講，這些人的發言，或在同志族群裡的代表性，往往引起社群內部極大的討論。</p>
+        <p style="margin-bottom:40px;">
+            其實，同志遊行的成功並非完全內在，也有國際趨勢、性別教育、全球化的影響，還有非常多在剛起步時期，不同社運團體之間的互相幫忙，當時，討論婦女、勞工議題，才是「政治正確」的顯學，而運動團體彼此之間的幫忙，在早期的同志遊行，扮演舉足輕重的角色。當遊行已經能夠作為吸引群眾的平台，媒體注目的焦點，含納更多小眾的議題，成為運動者間互相幫忙的習慣，更源自於同志族群作為能夠體會邊緣文化所受的辛苦的人，透過每年不同的主論述，主辦單位希望挑戰更先進、更細緻、更少數的性別議題，而不是讓參加的人沈浸在「陽光男同志」的主流模板裡，複製異性戀的霸權。
+        </p>
+        <a href="https://buya7mv7tppktwd2to6drw-on.drv.tw/webPage/" target="_blank">
+            <figure>
+                <img src="chart01.jpg" alt="leading image of this article" width="100%" />
+            </figure>
+        </a>
+        <p style="margin-top:45px">同志諮詢熱線志工主任鄭智偉在台上表示，多年來性別運動的成果，必須要歸功於性別教育的落實。而今年主題：澀澀性平打開開，多元教慾跟上來（Make Love, Not War--Sex Ed is the Way to Go），其實就是談性別教育，算是中規中矩，跟前年的「年齡不設限」試圖要討論情慾自主的年紀相比，已經溫和許多。性別運動與保守團體的戰線延長，護家盟和相關的團體屢屢透過「家長會」的管道，干涉性別教材的內容，維繫既有的性別價值，性別團體認為這是限制了青少年探索的機會，回想自己的成長經歷中，對性的認識也並不是在成年的那個早上，就都突然的明白「大人世界」的道理，充滿挫折、迷惘的體驗裡，性別教育的目的是要告訴不同性別氣質的人，他們並不「奇怪」。
+        </p>
+        <p style="margin-bottom: 45px">
+            同志遊行誰可以上台講話，誰報名了參加團體總受外界矚目。去年民進黨以完全執政的政黨身份參加，當時亦有諸多勞動改革爭議正在立院進行，對於婚姻平權得政策，幾度放話，政治人物也在臉書溫馨貼文，但實際毫無作為，讓性別團體的憤怒累積到了爆發點，雖然沒有正面衝突，但在遊行中夾在許多明顯針對民進黨抗議的隊伍，顯得尷尬。
+        </p>
+        <a href="https://hsu-chen.github.io/vismap/" target="_blank">
+            <figure>
+                <img src="chart02.jpg" alt="leading image of this article" width="100%" />
+            </figure>
+        </a>
+        <h2 style="margin-top:30px">數字上升的秘密　控管與超額教師</h2>
+        <p style="margin-top:20px">
+            今年，民進黨沒有團體報名，是不是終於意識到了「執政」作為一種體制內的改革者，比起必須走上街頭爭取版面的倡議團體，有更好的機會展現作為，仍有待觀察。反而是傳統上被認為偏向反同的立場國民黨，這次有青年團報名，時常與民進黨立委尤美女召開同婚記者會的國民黨不分區立委許毓仁，也到場支持，國民黨中常委中最年輕的劉昱佑在臉書上寫下：天籟不喧，大愛無言等語，看得出刻意低調，此次遊行，國民黨也沒有製作旗幟，由此觀察，性別議題不是鐵板一塊，在藍綠中都各有支持，為了選票還是價值，民眾張亮眼睛。
+        </p>
+        <p>
+            細數性別運動與立法的連結，就不能忘記1996年彭婉如命案後，《性侵害犯罪防治法》的制定成為立法濫觴，在台灣已成藍綠版圖此消彼漲的政治格局下，性別運動和改革，成為少數跨越政黨而能營造共鳴的政策方向，然而同志走的前10年，立法面上幾乎是毫無作為，保守勢力造成藍綠噤聲是主流，直到2000年玫瑰男孩葉永鋕被霸凌身故後，才在2004年催生《性別平等教育法》，性別教育在校園中，露出曙光。
+        </p>
+        <p>
+            性別運動的里程碑上，重大的進展，無奈的總來自巨大的悲慟，這次的大遊行，距離台大畢安生教授跳樓逝世已滿週年，一年之中，五月分司法院大法官釋字748號公佈，以憲法的位階指出，民法不包含同性結合的婚姻規定存在瑕疵，因此設下兩年大限，一旦沒有及時修法通過，民法條文直接適用同性婚姻。然而此解釋公告並沒有為性別政策定錨，反而凸顯要定專法還是修民法保障同志權益的問題，以及對於不同保障方式與原有民法體系的合作，需要立法技術，也考驗政黨追求進步的決心，可以確定的是，無論如何，畢安生和他的伴侶都已經用不到了。
+        </p>
+        <!--  抽言
+           <blockquote>
+            讓打者揮棒跌倒的投手叫摳大；跌倒後再爬起來的球隊叫傳院。＃回家路遙遠＃傳院我罩的
+        </blockquote>
+    
+        <figure>
+            <img src="coda03.jpg" alt="leading image of this article" width="100%" />
+        </figure>
+-->
+        <h2 style="margin-top:30px">快速變動的大環境　不穩定的代理身分</h2>
+
+        <p>
+            婚姻平權的實踐在可預見的將來，然而釋憲案是不是歸屬於蔡政府的功勞，亦即民進黨對同志族群友善程度的風向球，在性別團裡其實非常保留，雖然蔡英文上任後提名的大法官，大部分表態支持，而民進黨也有如尤美女、段宜康為首的立委力挺，但是偏向反對或不表態的也絕非少數，例如立委柯建銘和劉櫂豪，這些內部的不統合，讓民進黨錯失積極作為的時機，現在的民進黨，如果只是放任、等待民法自動生效，以不得罪保守派的拖延策略，想要選舉中兩面討好，在性別議題熱度未散的現在，恐怕難以再度贏得年輕族群的信任，而時效完成，同婚成為定局，也難以回應保守派的譴責。
+        </p>
+
+        <p>
+            夜色低垂，遊行隊伍回到花車舞台前，大部分的人潮散去，台上還在接力短講，口沫橫飛的喊口號，對同志來說，狂歡的週末夜才是生活的真實，而且正要展開猶如一個封閉的地下世界，對抗白天的、可見的、常態的各種被容許的行為，歧視行為和立法政策或許在形式，經過性別團體，多年努力終於可以貼近平等，但是性少數族群的社交、獲知的權利、使用公共空間的區隔、人工生殖後代而組成家庭的法令、在所謂性別主流者當中的印象，在2017年此時的台灣，仍與60年代的白先勇小說裡，新公園晚上和繁華的城市文明迥然分隔的情況，相差無幾。
+        </p>
+        <h2 style="margin-top:30px">跟老師一起離開的　是孩子的信任</h2>
+        <p style="margin-bottom: 60px;">
+            性別運動者存有不同的路線，但「『婚姻平權』不是終點」，是一句每個運動圈的人都會同意的話，即使最慢後年，婚姻平權已經成為台灣常態，同志遊行還會繼續舉辦，不是為了結婚，而是以過來人渾沌中摸索歧路的經驗，幫助每個還在不同櫃子裡，尚未找到自在位子的酷兒。
+        </p>
+
+        <div class="related-text">延伸閱讀</div>
+        <ul class="related-items">
+            <a href="https://wenrongchang.github.io/Crazy-all-nighter/104405016_%E5%BC%B5%E7%8E%9F%E6%A6%95%20%E6%9C%9F%E6%9C%AB%E7%B6%B2%E9%A0%81/teacher02.html"
+                target="_blank">
+                <li class="related-item">
+                    <img src="chart03.jpg" alt="leading image of this article" />
+                    <div>【當老師不再是鐵飯碗 2】代理教師陷重重困境　燃燒熱忱何以為繼</div>
+                </li>
+            </a>
+            <a href="http://www.unews.nccu.edu.tw/unews/%E4%BB%A3%E7%90%86%E6%95%99%E5%B8%AB%E6%96%B03/" target="_blank">
+                <li class="related-item">
+                    <img src="photo02.JPG" alt="leading image of this article" />
+                    <div>【當老師不再是鐵飯碗 3】提升代理教師待遇　保障學生受教權</div>
+                </li>
+            </a>
+        </ul>
+    </article>
+
+    <footer>
+        <div class="flex-footer">
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">關於我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">聯絡我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">關於我們</div>
+            </div>
+            <div>
+                <div class="footer-circle"></div>
+                <div class="footer-text">聯絡我們</div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+        @media screen and (max-width: 767px) {
+            table.hidden-on-mobile {
+                display: none;
+            }
+            table.shown-on-mobile {
+                display: table;
+            }
+        }
+        @media screen and (min-width: 768px) {
+            table.hidden-on-mobile {
+                display: table;
+                max-width: 770px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            table.shown-on-mobile {
+                display: none;
+            }
+        }
+    <footer>
+        <table class="shown-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">支持摳大</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">愛上摳大</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="hidden-on-mobile">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">關於摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">支持摳大</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">聯絡摳大</div>
+                    </td>
+                    <td>
+                        <div class="footer-circle"></div>
+                        <div class="footer-text">愛上摳大</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </footer>
+-->
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184139-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-121184139-1');
+</script>
+<!-- Hotjar Tracking Code for https://wenrongchang.github.io/Crazy-all-nighter/1 -->
+<script>
+    (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+        h._hjSettings = { hjid: 923854, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script'); r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+</html>
