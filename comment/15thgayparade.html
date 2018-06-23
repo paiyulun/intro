@@ -266,23 +266,42 @@
         }
 
 
-        .cover-foto img {
-            width: 300px;
-            height: 300px;
-            background: #f80;
-            border-radius: 50%;
-            object-fit: cover;
+        .coverfoto {
+            margin-top: 30px;
+            width: 100%;
+            height: 400px;
+            position: none;
+            overflow: hidden;
 
         }
 
 
+        .cover-img {
+            margin-top: -120px;
+            width: 100%
+        }
 
-
-        @media screen and (max-width:768px) {
+        @media screen and (max-width: 768px) {
             .flex-footer {
                 width: 228px;
             }
+
+            .coverfoto {
+                margin-top: 10px;
+                width: 100%;
+                height:200px;
+                position: none;
+            }
+            .cover-img {
+                width: 100%;
+                height: 100%;
+                margin-top: 0
+            }
+
+
         }
+
+
 
         @media screen and (min-width: 768px) and (max-width: 1023px) {
             article>p,
@@ -352,8 +371,8 @@ background-color: #fff">
     </header>
     <article>
 
-        <figure style="margin-top: 30px; width: 100%; height: 400px; position: none; overflow: hidden; ">
-            <img style="margin-top: -120px" src="DSC_4406.jpg" alt="leading image of this article" width="100%" />
+        <figure class="coverfoto">
+            <img class="cover-img" src="DSC_4406.jpg" alt="corver photo" />
         </figure>
 
         <header>
@@ -382,9 +401,11 @@ background-color: #fff">
                 <b>2017.10.29</b>
             </span>
 
-            <iframe align="right" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fpaiyulun.github.io%2Fintro%2Fcomment%2F15thgayparade&layout=button_count&size=large&mobile_iframe=true&width=76&height=28&appId" width="76" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+            <iframe align="right" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fpaiyulun.github.io%2Fintro%2Fcomment%2F15thgayparade&layout=button_count&size=large&mobile_iframe=true&width=76&height=28&appId"
+                width="76" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"
+                allow="encrypted-media"></iframe>
         </div>
-        
+
         </div>
         <p class="introduction">第15屆台灣同志遊行，昨（28）日下午在總統府前集結，群眾從景福門一路延伸到台大醫院，距離出發還有兩小時，捷運出口已經開始流量管制，在凱道的例行活動之中，也只有同志遊行有這種規模。對許多關心性別議題的人來說，10月的最後一個週六已經是行事曆上習慣空下來的日子，無論是異性戀的「直同志」或是最早遊行訴求想要讓市民看到的同志族群，以及後來逐漸被大家認識的多元性別和性向者，這場訴求「抗議」活動，但也是一個同志社群相聚、認識新朋友的日子，將近兩百個報名團體之中，遇到認識的人或者網路上曾相談的對象，他們發出一聲：「噢，你也在這裡」！
         </p>
@@ -412,8 +433,9 @@ background-color: #fff">
             <figure>
                 <img src="DSC_4354.jpg" alt="leading image of this article" width="100%" />
             </figure>
+            <figcaption>第15屆台灣同志遊行，國民黨籍立委許毓仁今天也與青年團參與遊行，低調出席的他，民眾合照的邀約不斷。</figcaption>
         </a>
-       
+
         <p style="margin-top:20px">
             今年，民進黨沒有團體報名，是不是終於意識到了「執政」作為一種體制內的改革者，比起必須走上街頭爭取版面的倡議團體，有更好的機會展現作為，仍有待觀察。反而是傳統上被認為偏向反同的立場國民黨，這次有青年團報名，時常與民進黨立委尤美女召開同婚記者會的國民黨不分區立委許毓仁，也到場支持，國民黨中常委中最年輕的劉昱佑在臉書上寫下：天籟不喧，大愛無言等語，看得出刻意低調，此次遊行，國民黨也沒有製作旗幟，由此觀察，性別議題不是鐵板一塊，在藍綠中都各有支持，為了選票還是價值，民眾張亮眼睛。
         </p>
@@ -432,9 +454,9 @@ background-color: #fff">
             <img src="coda03.jpg" alt="leading image of this article" width="100%" />
         </figure>
 -->
-        
-        
-       
+
+
+
         <p>
             婚姻平權的實踐在可預見的將來，然而釋憲案是不是歸屬於蔡政府的功勞，亦即民進黨對同志族群友善程度的風向球，在性別團裡其實非常保留，雖然蔡英文上任後提名的大法官，大部分表態支持，而民進黨也有如尤美女、段宜康為首的立委力挺，但是偏向反對或不表態的也絕非少數，例如立委柯建銘和劉櫂豪，這些內部的不統合，讓民進黨錯失積極作為的時機，現在的民進黨，如果只是放任、等待民法自動生效，以不得罪保守派的拖延策略，想要選舉中兩面討好，在性別議題熱度未散的現在，恐怕難以再度贏得年輕族群的信任，而時效完成，同婚成為定局，也難以回應保守派的譴責。
         </p>
@@ -442,7 +464,7 @@ background-color: #fff">
         <p>
             夜色低垂，遊行隊伍回到花車舞台前，大部分的人潮散去，台上還在接力短講，口沫橫飛的喊口號，對同志來說，狂歡的週末夜才是生活的真實，而且正要展開猶如一個封閉的地下世界，對抗白天的、可見的、常態的各種被容許的行為，歧視行為和立法政策或許在形式，經過性別團體，多年努力終於可以貼近平等，但是性少數族群的社交、獲知的權利、使用公共空間的區隔、人工生殖後代而組成家庭的法令、在所謂性別主流者當中的印象，在2017年此時的台灣，仍與60年代的白先勇小說裡，新公園晚上和繁華的城市文明迥然分隔的情況，相差無幾。
         </p>
-       
+
         <p style="margin-bottom: 60px;">
             性別運動者存有不同的路線，但「『婚姻平權』不是終點」，是一句每個運動圈的人都會同意的話，即使最慢後年，婚姻平權已經成為台灣常態，同志遊行還會繼續舉辦，不是為了結婚，而是以過來人渾沌中摸索歧路的經驗，幫助每個還在不同櫃子裡，尚未找到自在位子的酷兒。
         </p>
@@ -456,7 +478,8 @@ background-color: #fff">
                     <div>補起社會防護網　成年觀護人的職責想像與衝突</div>
                 </li>
             </a>
-            <a href="http://www.unews.nccu.edu.tw/unews/%EF%BC%88f%EF%BC%89%E5%AD%B8%E7%94%9F%E8%81%B2%E6%8F%B4%E5%8B%9E%E5%B7%A5%E6%8C%A8%E5%91%8A/" target="_blank">
+            <a href="http://www.unews.nccu.edu.tw/unews/%EF%BC%88f%EF%BC%89%E5%AD%B8%E7%94%9F%E8%81%B2%E6%8F%B4%E5%8B%9E%E5%B7%A5%E6%8C%A8%E5%91%8A/"
+                target="_blank">
                 <li class="related-item">
                     <img src="protest.jpg" alt="leading image of this article" />
                     <div>護勞權反挨告　被告生批校方無作為</div>
