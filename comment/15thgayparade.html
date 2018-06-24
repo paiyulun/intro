@@ -294,8 +294,17 @@
         }
 
 
+.audiocontrol{
+    position: fixed;
+            bottom: 0px;
+            left:210px;
+
+}
 
         @media screen and (max-width: 768px) {
+            .pub-date {
+                display: block;
+            }
             .flex-footer {
                 width: 228px;
             }
@@ -399,10 +408,32 @@
 background-color: #fff">
     <a href="https://www.facebook.com/paiyulun" target="_blank">
     <div class="stand">
+          
+                    
         <img class="standimg" src="stand.png"></img>
-
+        
     </div>
+  
     </a>
+
+
+         
+
+
+
+
+
+<div class="audiocontrol" >
+    <audio controls autoplay>
+
+            <source src="voice.mp3" >
+            
+            
+                       </audio>
+                       </div>
+         
+
+
     <header class="header">
         <table style="width:100%">
             <tbody>
@@ -418,6 +449,8 @@ background-color: #fff">
         </table>
     </header>
     <article>
+
+       
 
         <figure class="coverfoto">
             <img class="cover-img" src="DSC_4406.jpg" alt="corver photo" />
@@ -444,7 +477,7 @@ background-color: #fff">
                 </b>
             </span>
 
-            <span class="autohrs"> 發布日期/
+            <span class="autohrs pub-date"> 發布日期/
 
                 <b>2017.10.29</b>
             </span>
@@ -510,6 +543,14 @@ background-color: #fff">
             性別運動者存有不同的路線，但「『婚姻平權』不是終點」，是一句每個運動圈的人都會同意的話，即使最慢後年，婚姻平權已經成為台灣常態，同志遊行還會繼續舉辦，不是為了結婚，而是以過來人渾沌中摸索歧路的經驗，幫助每個還在不同櫃子裡，尚未找到自在位子的酷兒。
         </p>
 
+
+
+        <div id="jquery_jplayer_1"></div>
+        <div id="jp_container_1">
+         <a href="#" class="jp-play">Play</a>
+         <a href="#" class="jp-pause">Pause</a>
+        </div>
+
         <div class="related-text">延伸閱讀</div>
         <ul class="related-items">
             <a href="http://www.unews.nccu.edu.tw/unews/%E8%A3%9C%E8%B5%B7%E7%A4%BE%E6%9C%83%E9%98%B2%E8%AD%B7%E7%B6%B2%e3%80%80%E6%88%90%E5%B9%B4%E8%A7%80%E8%AD%B7%E4%BA%BA%E7%9A%84%E8%81%B7%E8%B2%AC%E6%83%B3%E5%83%8F%E8%88%87%E8%A1%9D%E7%AA%81/"
@@ -551,6 +592,27 @@ background-color: #fff">
     </footer>
 
 </body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+     $("#jquery_jplayer_1").jPlayer({
+      ready: function () {
+       $(this).jPlayer("setMedia", {
+        m4a: "/media/mysound.mp4",
+        oga: "/media/mysound.ogg"
+       });
+      },
+      swfPath: "/js",
+      supplied: "m4a, oga"
+     });
+    });
+   </script>
+  
+
+
+
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121184139-1"></script>
 <script>
@@ -568,6 +630,7 @@ background-color: #fff">
             r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        
     </script>
 
 
