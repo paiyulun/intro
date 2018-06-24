@@ -296,9 +296,16 @@
 
 .audiocontrol{
     position: fixed;
-            bottom: 0px;
-            left:210px;
+            bottom: 60px;
+            left:180px;
 
+}
+
+
+.bar{
+    position: fixed;
+            bottom: 10px;
+            left:110px;
 }
 
         @media screen and (max-width: 768px) {
@@ -419,17 +426,12 @@ background-color: #fff">
 
          
 
-
+<img class="bar" src="bar.png"></img>
 
 
 
 <div class="audiocontrol" >
-    <audio controls autoplay>
-
-            <source src="voice.mp3" >
-            
-            
-                       </audio>
+    <span style="font-size: 22px; "class="soundcite" data-url="https://paiyulun.github.io/intro/comment/paradevoice.mp3" data-start="0" data-end="15000" data-plays="5">你好！歡迎來到我的網站！</span>
                        </div>
          
 
@@ -610,7 +612,7 @@ background-color: #fff">
   
 
 
-
+  <link href='https://cdn.knightlab.com/libs/soundcite/latest/css/player.css' rel='stylesheet' type='text/css'><script type='text/javascript' src='https://cdn.knightlab.com/libs/soundcite/latest/js/soundcite.min.js'></script>
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
